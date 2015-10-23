@@ -12,23 +12,24 @@ class Computador {
 	
 public:
 	
-	Computador();
-	Computador(string, string, string, int static, int const, int);
-	        
-      void setPlacaMae(string);
-      void setProcessador(string, int);
-      void setMemoria(int static, int const);
-      void setPlacaVideo(string);
-      void getComputador();
-      
-protected:
+	Computador(string & = "", string & = "", string & = "", int = 0, int = 0, int= 0);
+	Computador(const Computador &);
 	
-       int static memoriaRAM;
-	   int const discoRigido;
+	  void setPlacaMae(string &);
+      void setProcessador(string &, int);
+      void setMemoria(int, int);
+      void setPlacaVideo(string &);
+	  void getComputador();
+      
+private:
+	
+       int memoriaRAM;
+	   int discoRigido;
 	   int nucleoProcessador;
        string processador;
 	   string placaMae;
-	   string placaVideo;       
+	   string placaVideo;  
+	        
        
 };
 
